@@ -38,6 +38,7 @@ const Case3 = () => {
 
   return (
     <div>
+      <h2>Caso 3: Lista de carrito con productos</h2>
       <ul>
         {cart.map((item) => (
           <li key={item.id}>
