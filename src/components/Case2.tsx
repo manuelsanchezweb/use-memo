@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react'
 const Case2 = () => {
   const [textSearch, setTextSearch] = useState('')
   const [lengthSearch, setLengthSearch] = useState(0)
-  const [list, setList] = useState(['apple', 'banana', 'orange', 'grape'])
+  const [list, _] = useState(['apple', 'banana', 'orange', 'grape'])
 
   const filteredList = useMemo(() => {
     return list
