@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 const Case1 = () => {
   const [query, setQuery] = useState('')
-  const [filteredItems, setFilteredItems] = useState<string[]>([])
+  // const [filteredItems, setFilteredItems] = useState<string[]>([])
 
   const items = [
     "Harry Potter and the Philosopher's Stone",
@@ -24,18 +24,18 @@ const Case1 = () => {
   }
 
   // Sin useMemo
-  useEffect(() => {
-    setFilteredItems(
-      items.filter((item) => item.toLowerCase().includes(query.toLowerCase()))
-    )
-  }, [items, query])
+  // useEffect(() => {
+  //   setFilteredItems(
+  //     items.filter((item) => item.toLowerCase().includes(query.toLowerCase()))
+  //   )
+  // }, [items, query])
 
   // Con useMemo
-  //   const filteredItems = useMemo(() => {
-  //     return items.filter((item) =>
-  //       item.toLowerCase().includes(query.toLowerCase())
-  //     )
-  //   }, [items, query])
+  const filteredItems = useMemo(() => {
+    return items.filter((item) =>
+      item.toLowerCase().includes(query.toLowerCase())
+    )
+  }, [items, query])
 
   return (
     <>

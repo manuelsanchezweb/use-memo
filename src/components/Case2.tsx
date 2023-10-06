@@ -13,7 +13,10 @@ const Case2 = () => {
 
   return (
     <div>
-      <h2>Caso 2: Filtrar elementos de una lista con dos inputs</h2>
+      <h2>
+        Caso 2: Filtrar elementos de una lista con dos inputs: nombre y max de
+        caracteres
+      </h2>
       <input
         type="text"
         value={textSearch}
